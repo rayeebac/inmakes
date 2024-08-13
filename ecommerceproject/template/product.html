@@ -22,7 +22,7 @@
 <div class="row">
         <div class="col-12 col-sm12 col-md-12 col-lg-6 text-center">
                 <div style="min-width:18rem">
-                        <img src="{{product.image.url}}" alt="{{product.name}}" style="max-width:100%;height:auto;">
+                        <img src="{{product.image.url}}" alt="{{product.name}}" style="max-width:100%;max-height:60%;">
                 </div>
         </div>
 
@@ -35,7 +35,7 @@
                       {% if product.stock <= 0 %}
                       <p class="text-justify my_prod_text"><b>Out of stock</b></p>
                       {% else %}
-                      <a class="btn-btn-secondary" href="{% url 'cart:add_cart' product.id %}">Add to Cart</a>
+                      <a class="btn btn-secondary btn-block my_custom_button" href="{% url 'cart:add_cart' product.id %}">Add to Cart</a>
                       {% endif %}
               </div>
                       </div>
